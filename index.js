@@ -5,14 +5,14 @@ const oracledb = require('oracledb')
 const stream = require('stream')
 const co = require('co')
 
-//create a connectin pool, you don't have to create a pool
+//create a connection pool, you don't have to create a pool
 function createPool() {
     return oracledb.createPool(config.db)
 }
 
 function *run() {
     const pool = yield createPool()
-    //but you so have to somehow get a connection
+    //but you do have to somehow get a connection
     const conn = yield pool.getConnection()
     //run the query and get the results, this query should return a LOB column, but you knew that
     const results = yield conn.execute('select * from tasks_clob')
