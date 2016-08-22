@@ -1,0 +1,15 @@
+{
+  "name": "oracledb-clob2string",
+  "version": "0.1.0",
+  "description": "Will convert an oracledb result set to one with strings instead of LOBs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles Read",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "oracledb": "^1.11.0"
+  }
+}
